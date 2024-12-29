@@ -1,40 +1,9 @@
 ---
-import Footer from "../components/Footer.astro"
-import Header from "../components/Header.astro"
-import Navigation from "../components/Navigation.astro";
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro"
 
-const pageTile = "Home";
+const pageTitle = "Home";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<!-- <title>Home</title> -->
-        <title>{pageTile}</title>
-	</head>
-	<body>
-
-        <!-- <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a> -->
-
-        <!-- <Navigation /> -->
-        <Header />
-		<h1>Astro</h1>
-        
-        
-        <h1>Hello! pegasusia is here!!</h1>
-        
-        
-        <h2>And my site is on netlify.app!</h2>
-        
-        
-        <h3>The url is: pegaastrodemo.netlify.app!!!</h3>
-
-        <Footer />
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <h2>Awesome BLog subtitle</h2>
+</BaseLayout>
